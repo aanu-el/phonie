@@ -73,9 +73,12 @@ input::placeholder {
   background-size: 30px;
 }
 
-/* input:focus {
-  outline-color: #96c096;
-} */
+.error-msg {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  color: red;
+}
 
 .btn-submit {
   margin-top: var(--margin-top);
