@@ -71,7 +71,7 @@ const nineMobilePrefixes = ["809", "818", "817", "908", "909"];
 
 function validatePhoneNumber() {
   phoneNumber.addEventListener("input", (e) => {
-    //Get the phone number entered by the user and store it in a variable
+    /* Get the phone number entered by the user and store it in a variable. */
     let userPhoneNumber = e.target.value;
     let userPhoneNumberPrefix = "";
 
@@ -99,7 +99,7 @@ function getPrefix(userPhoneNumber) {
 }
 
 function displayErrorMessage() {
-  //Display an error message on the form if the user enters an invalid phone number by checking the country code and the length of the phone number entered.
+  /* Display an error message on the form if the user enters an invalid phone number by checking the country code and the length of the phone number entered. */
   if (
     (userPhoneNumber[0] == 0 &&
       userPhoneNumber.length == 11 &&
@@ -115,7 +115,7 @@ function displayErrorMessage() {
 }
 
 function displayLogo() {
-  // Check the length of the user input. Get the prefix of the phone number that the user enters and check each array of network providers for a match. If it matches, display the logo of the network provider.
+  /* Check the length of the user input. Get the prefix of the phone number that the user enters and check each array of network providers for a match. If it matches, display the logo of the network provider. */
 
   // for mtn
   if (
@@ -165,3 +165,5 @@ function displayLogo() {
     phoneNumber.classList.remove("nine-mobile");
   }
 }
+
+/* form validation */
