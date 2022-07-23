@@ -116,9 +116,11 @@ function validatePhoneNumber() {
 
       // for mtn
       if (
-        (mtnPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber[0] == 0 &&
+          mtnPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 11) ||
-        (mtnPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber.substring(0, 4) == countryCode &&
+          mtnPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 14)
       ) {
         phoneNumber.classList.add("mtn");
@@ -128,9 +130,11 @@ function validatePhoneNumber() {
 
       // for Glo
       if (
-        (gloPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber[0] == 0 &&
+          gloPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 11) ||
-        (gloPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber.substring(0, 4) == countryCode &&
+          gloPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 14)
       ) {
         phoneNumber.classList.add("glo");
@@ -140,9 +144,11 @@ function validatePhoneNumber() {
 
       // for airtel
       if (
-        (airtelPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber[0] == 0 &&
+          airtelPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 11) ||
-        (airtelPrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber.substring(0, 4) == countryCode &&
+          airtelPrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 14)
       ) {
         phoneNumber.classList.add("airtel");
@@ -152,9 +158,11 @@ function validatePhoneNumber() {
 
       // for 9mobile
       if (
-        (nineMobilePrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber[0] == 0 &&
+          nineMobilePrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 11) ||
-        (nineMobilePrefixes.includes(userPhoneNumberPrefix) &&
+        (userPhoneNumber.substring(0, 4) == countryCode &&
+          nineMobilePrefixes.includes(userPhoneNumberPrefix) &&
           userPhoneNumber.length == 14)
       ) {
         phoneNumber.classList.add("nine-mobile");
@@ -165,4 +173,4 @@ function validatePhoneNumber() {
   });
 }
 
-/* form validation */
+validatePhoneNumber();
